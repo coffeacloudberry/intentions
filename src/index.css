@@ -1,0 +1,190 @@
+@font-face {
+    font-family: "myTitle";
+    src: local("myTitle"),
+        url(./fonts/life_savers/LifeSavers_Regular.ttf) format("truetype");
+}
+
+.intentionsContent {
+    /* gap on both side */
+    margin: auto;
+}
+
+.smallScreenSizeMenu {
+    /* fixed on top */
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+
+.largeScreenSizeMenu {
+    /* fixed on left side */
+    position: fixed;
+    overflow: auto;
+    height: 100vh;
+    left: 0;
+}
+
+@media (min-width: 1148px) {
+    .smallScreenSizeMenu {
+        display: none;
+    }
+
+    .largeScreenSizeMenu {
+        display: inherit;
+    }
+
+    .expandedSider {
+        margin-left: 200px;
+    }
+
+    .intentionsForm {
+        margin-top: 24px;
+    }
+
+    .imageHeader {
+        margin-top: 24px;
+    }
+
+    .modalAbout {
+        width: 80% !important;
+        max-width: 790px;
+    }
+}
+
+@media (max-width: 1148px) {
+    .smallScreenSizeMenu {
+        display: inherit;
+    }
+
+    .largeScreenSizeMenu {
+        display: none;
+    }
+
+    .expandedSider {
+        margin-left: 0;
+    }
+
+    .intentionsForm {
+        margin-top: 0;
+    }
+
+    .imageHeader {
+        margin-top: 46px;
+    }
+
+    .modalAbout {
+        width: 90% !important;
+    }
+}
+
+.modalAbout {
+    top: 20px;
+}
+
+.imageHeader {
+    height: 370px;
+    padding: 0;
+}
+
+.imageHeader .imageTitle img {
+    /* cover with dynamic width and fixed heigth */
+    width: 100%;
+    height: 370px;
+    object-fit: cover;
+    object-position: middle;
+}
+
+.intentionsForm {
+    background: white;
+    padding: 6px 24px;
+}
+
+.aboutPanel .ant-collapse-content-box p {
+    text-align: justify;
+}
+
+.intentionsFooter {
+    text-align: center;
+}
+
+.imageTitle {
+    position: relative;
+}
+
+.textAboveImage {
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 50px;
+    width: 100%;
+    text-shadow: 1px 1px 1px white;
+    padding: 0 24px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: myTitle;
+    font-weight: 600;
+}
+
+.ant-drawer-title,
+.ant-modal-title,
+.ant-collapse-header,
+.ant-modal-confirm-title {
+    font-family: myTitle;
+    font-size: 21px !important;
+    font-weight: 600 !important;
+}
+
+.ant-modal-confirm-title {
+    line-height: 1.2 !important;
+}
+
+.ant-list-item-meta-title {
+    font-size: 17px;
+}
+
+.ant-back-top {
+    right: 24px !important;
+    bottom: 24px !important;
+}
+
+.imageAbout img {
+    margin-bottom: 12px;
+    box-shadow: 1px 1px 2px grey;
+    border-radius: 3px !important;
+}
+
+.largeScreenSizeMenu .progressCounter {
+    position: absolute;
+    bottom: 20px;
+    left: 23px;
+    padding: 6px;
+    background: #f0f2f5;
+    border-radius: 140px;
+}
+
+@media (max-width: 520px) {
+    .smallScreenSizeMenu .progressCounter {
+        display: none;
+    }
+}
+
+.smallScreenSizeMenu .progressCounter {
+    position: absolute;
+    right: 11px;
+    width: 140px;
+    margin-top: 11px;
+    background: #f0f2f5;
+    padding-right: 8px;
+    padding-left: 10px;
+    border-radius: 10px;
+    height: 24px;
+}
+
+.smallScreenSizeMenu .progressCounter .ant-progress {
+    display: block !important;
+    margin-top: 3px !important;
+}
