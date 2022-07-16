@@ -13,17 +13,13 @@ const CopyrightNotice = () => {
                 <FormattedMessage id="pageHeaderTitle" />
             </em>{" "}
             · <FormattedMessage id="createdBy" />{" "}
-            <a href="https://explorewilder.com/about">Clement</a> ·{" "}
-            <a href="https://github.com/ExploreWilder/intentions/blob/main/LICENSE">
+            <a href="https://www.explorewilder.com/#!/en/about">Clement</a> ·{" "}
+            <a href="https://raw.githubusercontent.com/coffeacloudberry/intentions/main/LICENSE.pdf">
                 Copyright
             </a>{" "}
             ·{" "}
-            <a href="https://github.com/ExploreWilder/intentions/">
+            <a href="https://github.com/coffeacloudberry/intentions">
                 <FormattedMessage id="source" />
-            </a>{" "}
-            ·{" "}
-            <a href="https://explorewilder.statuspage.io/">
-                <FormattedMessage id="status" />
             </a>
         </>
     );

@@ -51,7 +51,6 @@ class App extends Component {
         currentLocale: "en",
         currentAntLocale: enGB,
         visibleAbout: false,
-        visibleSupport: false,
         visiblePdfCreationOnSuccess: false,
         progressCounter: 0,
     };
@@ -124,26 +123,6 @@ class App extends Component {
     };
 
     /**
-     * When the "Support" modal is closed.
-     */
-    handleCancelSupport = () => {
-        this.setState({
-            ...this.state,
-            visibleSupport: false,
-        });
-    };
-
-    /**
-     * Show the "Support" modal.
-     */
-    showSupport = () => {
-        this.setState({
-            ...this.state,
-            visibleSupport: true,
-        });
-    };
-
-    /**
      * Update the counter used to highlight how much the form is filled in.
      * @param progress Percentage.
      */
@@ -169,7 +148,6 @@ class App extends Component {
             currentLocale,
             currentAntLocale,
             visibleAbout,
-            visibleSupport,
             progressCounter,
             visiblePdfCreationOnSuccess,
         } = this.state;
@@ -206,25 +184,6 @@ class App extends Component {
                     >
                         <PdfCreationOnSuccess />
                     </Modal>
-                    <Modal
-                        title={<FormattedMessage id="aboutSupportTitle" />}
-                        visible={visibleSupport}
-                        onCancel={this.handleCancelSupport}
-                        cancelText={<FormattedMessage id="close" />}
-                        okText={
-                            <a href="https://ko-fi.com/explorewilder">
-                                <FormattedMessage id="buyMeACoffee" />
-                            </a>
-                        }
-                    >
-                        <p
-                            dangerouslySetInnerHTML={{
-                                __html: this.translations[currentLocale][
-                                    "aboutSupportDesc"
-                                ],
-                            }}
-                        ></p>
-                    </Modal>
                     <BackTop />
                     <Layout>
                         <Sider className="largeScreenSizeMenu">
@@ -249,13 +208,6 @@ class App extends Component {
                                     onClick={this.showAbout}
                                 >
                                     <FormattedMessage id="about" />
-                                </Menu.Item>
-                                <Menu.Item
-                                    key="support"
-                                    icon={<HeartOutlined />}
-                                    onClick={this.showSupport}
-                                >
-                                    <FormattedMessage id="support" />
                                 </Menu.Item>
                                 <Progress
                                     type="circle"
@@ -289,13 +241,6 @@ class App extends Component {
                                     onClick={this.showAbout}
                                 >
                                     <FormattedMessage id="about" />
-                                </Menu.Item>
-                                <Menu.Item
-                                    key="support"
-                                    icon={<HeartOutlined />}
-                                    onClick={this.showSupport}
-                                >
-                                    <FormattedMessage id="support" />
                                 </Menu.Item>
                                 <div className="progressCounter">
                                     <Progress

@@ -10,7 +10,7 @@ const { Panel } = Collapse;
  */
 const About = () => {
     const { formatMessage } = useIntl();
-    const sections = ["What", "How", "Privacy", "Security", "Me", "Support"];
+    const sections = ["What", "How", "Privacy", "Security", "Me"];
     let panels = [];
 
     sections.forEach((section) => {
@@ -33,16 +33,6 @@ const About = () => {
                         __html: formatMessage({ id: `about${section}Desc` }),
                     }}
                 ></p>
-                {section === "Support" ? (
-                    <a href="https://ko-fi.com/explorewilder">
-                        <img
-                            src="/images/BuyMeACoffee.png"
-                            alt={formatMessage({ id: "buyMeACoffee" })}
-                        />
-                    </a>
-                ) : (
-                    ""
-                )}
             </Panel>
         );
     });
