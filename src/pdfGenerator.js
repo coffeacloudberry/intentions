@@ -522,7 +522,7 @@ class pdfGenerator extends jsPDF {
         this.moveCursorDown(3);
         this.setFont("myTitle", "bold").setFontSize(9);
         this.textWithLink(this.locale.signaturePdf, this.margin, this.currY, {
-            url: "https://github.com/coffeacloudberry/intentions",
+            url: "https://intentions.explorewilder.com/",
         });
         const signatureWidth = this.getTextWidth(
             this.locale.signaturePdf + " "
