@@ -1,0 +1,30 @@
+{
+    "headers": [
+        {
+            "source": "/(.*)",
+            "headers": [
+                {
+                    "key": "X-Content-Type-Options",
+                    "value": "nosniff"
+                }
+            ]
+        },
+        {
+            "source": "/",
+            "headers": [
+                {
+                    "key": "Content-Security-Policy",
+                    "value": "default-src 'none'; base-uri 'none'; script-src 'self'; object-src 'none'; connect-src 'self'; img-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; media-src 'none'; frame-ancestors 'none'; form-action 'none'"
+                },
+                {
+                    "key": "Referrer-Policy",
+                    "value": "no-referrer"
+                },
+                {
+                    "key": "Access-Control-Allow-Origin",
+                    "value": "https://intentions.explorewilder.com"
+                }
+            ]
+        }
+    ]
+}
